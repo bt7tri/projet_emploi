@@ -225,3 +225,7 @@ p {
 .edu__period {
   font-size: var(--font-micro);
 }
+
+.edu__logo {
+  width: 150px;
+}
