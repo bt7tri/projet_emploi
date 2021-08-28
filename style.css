@@ -15,6 +15,7 @@
   --color-orange: #feb546;
   --color-white-blue: #6be2e8;
   --color-dark-blue: #042a63;
+  --color-dark-white-blue: #0dcbd1;
 
   /* Font size */
   --font-large: 48px;
@@ -97,12 +98,21 @@ p {
 
 /* Navbar */
 #navbar {
+  position: fixed; /*added for transparent...independently exist and always at the same place*/
+  width: 100%;
   display: flex;
   justify-content: space-between;
-  background-color: var(--color-white-blue);
   align-items: center;
   color: var(--color-white);
   padding: 16px;
+  /*background-color: var(--color-white-blue);*/
+  background-color: transparent;
+  transition: all var(--animation-duration) ease-in-out;
+}
+
+#navbar.navbar-dark {
+  background-color: var(--color-dark-white-blue);
+  padding: 8px;
 }
 
 .navbar__menu {
@@ -142,6 +152,7 @@ p {
 #home {
   background: url("imgs/home-background.png") center/cover no-repeat;
   padding: 40px;
+  padding-top: 100px;
   text-align: center;
 }
 
