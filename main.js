@@ -25,7 +25,7 @@ document.addEventListener('scroll', () =>{
 const navbarMenu=document.querySelector('.navbar__menu');
 navbarMenu.addEventListener('click', (event) =>{
     
-    const target=event.target;
+    const target=event.target;  //btn on navbar which is clicked.
     const link=target.dataset.link;
     if (link==null)
     {
@@ -33,8 +33,26 @@ navbarMenu.addEventListener('click', (event) =>{
     }
     
     //console.log(event.target.dataset.link);
-    const scrollTo=document.querySelector(link);
-    scrollTo.scrollIntoView({behavior: "smooth"});
+    //const scrollTo=document.querySelector(link);
+    //scrollTo.scrollIntoView({behavior: "smooth"});
     //the name of "data-link" should be the same with the id of target section, and # should be added in front of the name.
-    
+    scrollIntoViews(link);
 });
+
+//Move to Contact section when clicking "Contactez moi".
+const btnContact=document.querySelector('.home__contact');
+btnContact.addEventListener('click', (event) =>{
+    //const target=event.target;
+    //const link=target.dataset.link;
+    //const scrollTo=document.querySelector(link);
+    //scrollTo.scrollIntoView({behavior: "smooth"});
+
+    //const scrollTarget=document.querySelector('#contact');
+    //scrollTarget.scrollIntoView({behavior: "smooth"});
+    scrollIntoViews('#contact');
+});
+
+function scrollIntoViews(selector){
+    const scrollTarget=document.querySelector(selector);
+    scrollTarget.scrollIntoView({behavior: "smooth"});
+}
