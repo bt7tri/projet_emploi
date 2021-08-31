@@ -231,22 +231,26 @@
 			<h1>Mon travail</h1>
 			<h3>Projets</h3>
 			<div class="work__categories">
-				<button class="category__btn active">
+				<button class="category__btn active" data-filter="*">
+					Tout <span class="category__count">3</span>
+				</button>
+
+				<button class="category__btn" data-filter="projet-emploi">
 					Ce projet <span class="category__count">1</span>
 				</button>
 			
-				<button class="category__btn">
+				<button class="category__btn" data-filter="projet-ecole-final">
 					Projet_École_final <span class="category__count">1</span>
 				</button>
 
-				<button class="category__btn">
+				<button class="category__btn" data-filter="projet-ecole-mid">
 					Projet_École_mid <span class="category__count">1</span>
 				</button>
 			</div>
 
 			<div class="work__projects">		
 			
-				<a href="https://bt7tri.github.io/projet_emploi/" class="project" target="blank">
+				<a href="https://bt7tri.github.io/projet_emploi/" class="project" target="blank" data-type="projet-emploi">
 					
 					<img class="project__img" src="imgs/projects/projet_emploi.PNG" alt="projet_emploi">
 					<div class="project__description">
@@ -256,7 +260,7 @@
 					
 				</a>	
 			
-				<a href="https://bt7tri.github.io/projet_ecole_2/" class="project" target="blank">				
+				<a href="https://bt7tri.github.io/projet_ecole_2/" class="project" target="blank" data-type="projet-ecole-final">				
 				
 					<img class="project__img" src="imgs/projects/projet_ecole_final.PNG" alt="projet_école_final">
 					<div class="project__description">
@@ -268,7 +272,7 @@
 				
 
 			
-				<a href="https://bt7tri.github.io/projet_ecole_1/" class="project" target="blank">
+				<a href="https://bt7tri.github.io/projet_ecole_1/" class="project" target="blank"  data-type="projet-ecole-mid">
 				
 					<img class="project__img" src="imgs/projects/projet_ecole_mid.PNG" alt="projet_école_mid">
 					<div class="project__description">
