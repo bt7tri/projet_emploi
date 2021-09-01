@@ -36,8 +36,16 @@ navbarMenu.addEventListener('click', (event) =>{
     //const scrollTo=document.querySelector(link);
     //scrollTo.scrollIntoView({behavior: "smooth"});
     //the name of "data-link" should be the same with the id of target section, and # should be added in front of the name.
+    navbarMenu.classList.remove('open');
     scrollIntoViews(link);
 });
+
+//Navbar toggle button for small screen.
+const navbarToggleBtn=document.querySelector('.navbar__toggle-btn');
+navbarToggleBtn.addEventListener('click', ()=>{
+    navbarMenu.classList.toggle('open');
+});
+
 
 //Move to Contact section when clicking "Contactez moi".
 const btnContact=document.querySelector('.home__contact');
